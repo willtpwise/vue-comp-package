@@ -22,8 +22,8 @@ npm run serve
 
 ## The Issue
 
-1. The client installs the Vue Composition API in [client/src/main.js](client/src/main.js), then installs the package in [client/src/main.app.js](client/src/main.app.js).
-1. The package globally installs the [my-button component](package/src/my-button.vue) inside of the packages [install function](package/src/index.ts)
+1. The client installs the Vue Composition API, then the package in [client/src/main.js](client/src/main.js)
+1. The package globally installs the [my-button component](package/src/my-button.vue) inside of the package's [install function](package/src/index.js)
 1. The client renders the my-button component in [App.vue](client/src/App.vue)
 1. The browsers throws an error:
 
