@@ -17,7 +17,3 @@ export default createComponent({
 <template>
   <button>{{ labelFromSetup }}</button>
 </template>
-
-<style lang="scss" scoped>
-
-</style>
