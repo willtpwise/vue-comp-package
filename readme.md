@@ -4,22 +4,6 @@ This repo has two directories:
 * `package`: A shared Vue.js library which exposes a `my-button` component
 * `client`: A Vue.js app which consumes the `my-button` component
 
-## Running Locally
-
-### The Package
-```
-cd package
-npm i
-npm run build
-```
-
-### The Client
-```
-cd client
-npm i
-npm run serve
-```
-
 ## The Issue
 
 1. The client installs the Vue Composition API, then the package in [client/src/main.js](client/src/main.js)
@@ -30,3 +14,22 @@ npm run serve
 ```
 [Vue warn]: Error in data(): "Error: [vue-composition-api] must call Vue.use(plugin) before using any function."
 ```
+
+## Steps to Reproduce
+
+### Build The Package
+```
+cd package
+npm i
+npm run build
+```
+
+### Run The Client
+```
+cd client
+npm i
+npm run serve
+```
+Now open http://localhost:8080
+
+You should see a heading and a button. The button is a component exposed by the package. Both of these elements are rendering their content from a `ref` declared inside of a `setup` function of their respective components. The button's content however is not rendered due to the issue above. 
